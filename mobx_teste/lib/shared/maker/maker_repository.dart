@@ -2,7 +2,7 @@ import '../../features/product/data/datasources/services/product_impl_services.d
 import '../../features/product/data/repositories/product_impl_repository.dart';
 import '../../main.dart';
 
-var manckerProductRepositoryImpl = ProductImplRepository(
+var makerProductRepositoryImpl = ProductImplRepository(
   productServices: ProductImplServices(
     hasuraConnect: hasuraConnect,
   ),

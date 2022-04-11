@@ -5,7 +5,7 @@ import 'package:mobx_teste/features/product/domain/usecases/get_list_all_product
 import 'package:mobx_teste/features/product/domain/usecases/get_list_all_product_stream.dart';
 import 'package:mobx_teste/routes/app_pages.dart';
 import 'package:mobx_teste/routes/app_routes.dart';
-import 'package:mobx_teste/shared/macker/maker_repository.dart';
+import 'package:mobx_teste/shared/maker/maker_repository.dart';
 import 'features/product/presentation/store/product_store.dart';
 
 GetIt getIt = GetIt.instance;
@@ -22,10 +22,10 @@ void setup() {
   getIt.registerSingleton<ProductStore>(
     ProductStore(
       getAllProduct: GetAllProduct(
-        productRepository: manckerProductRepositoryImpl,
+        productRepository: makerProductRepositoryImpl,
       ),
       getAllProductStream: GetAllProductStream(
-        productRepository: manckerProductRepositoryImpl,
+        productRepository: makerProductRepositoryImpl,
       ),
     ),
   );
